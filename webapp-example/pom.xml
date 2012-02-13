@@ -9,8 +9,7 @@
     <version>0.01.00-SNAPSHOT</version>
   </parent>
 
-  <name>Solr Indexer - WebApp Example</name>
-  <description>Hippo Forge - Solr Indexer - WebApp Example</description>
+  <name>Hippo Solr indexer - WebApp Example</name>
   <groupId>org.onehippo.forge.solr.indexer</groupId>
   <artifactId>solr-indexer-webapp-example</artifactId>
   <version>0.01.00-SNAPSHOT</version>

@@ -9,8 +9,7 @@
     <version>0.01.00-SNAPSHOT</version>
   </parent>
 
-  <name>Solr Indexer - WebApp Dependencies</name>
-  <description>Hippo Forge - Solr Indexer - WebApp Dependencies</description>
+  <name>Hippo Solr indexer - WebApp Dependencies</name>
   <groupId>org.onehippo.forge.solr.indexer</groupId>
   <artifactId>solr-indexer-webapp-dependencies</artifactId>
   <version>0.01.00-SNAPSHOT</version>

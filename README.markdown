@@ -1,6 +1,6 @@
 # Hippo Solr indexer
 
-[Solr](http://lucene.apache.org/solr/) indexer for [Hippo CMS](http://www.onehippo.com/en/products/cms)
+For regularly indexing [Hippo CMS](http://www.onehippo.com/en/products/cms) content into [Solr](http://lucene.apache.org/solr/).
 
 ## Build
 
@@ -12,13 +12,15 @@
 
 ## Install
 
-Add the **addon-repository** to the **content** module POM:
+To be able to store the indexer configuration in the repository, you will add the **addon-repository** to the **content** module POM:
 
     <dependency>
       <groupId>org.onehippo.forge.solr.indexer</groupId>
       <artifactId>solr-indexer-addon-repository</artifactId>
       <version>${hippo.solr-indexer.version}</version>
     </dependency>
+
+The Solr indexer webapp must be deployed in the same container as CMS and site webapps.
 
 ### Webapp example
 
