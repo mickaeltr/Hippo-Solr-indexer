@@ -20,7 +20,7 @@ To be able to store the indexer configuration in the repository, you will add th
       <version>${hippo.solr-indexer.version}</version>
     </dependency>
 
-The Solr indexer webapp must be deployed in the same container as CMS and site webapps.
+A Solr indexer webapp must then be deployed in the same container as CMS and site webapps...
 
 ### Webapp example
 

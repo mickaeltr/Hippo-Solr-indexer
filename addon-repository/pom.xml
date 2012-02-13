@@ -9,8 +9,7 @@
     <version>0.01.00-SNAPSHOT</version>
   </parent>
 
-  <name>Solr Indexer - Addon Repository</name>
-  <description>Hippo Forge - Solr Indexer - Addon Repository</description>
+  <name>Hippo Solr indexer - Addon Repository</name>
   <groupId>org.onehippo.forge.solr.indexer</groupId>
   <artifactId>solr-indexer-addon-repository</artifactId>
   <version>0.01.00-SNAPSHOT</version>
