@@ -80,4 +80,30 @@
     <module>webapp-example</module>
   </modules>
 
+  <!--Override wrong meta pushed by the super POM-->
+  <url/>
+  <inceptionYear/>
+  <organization/>
+  <licenses>
+    <license/>
+  </licenses>
+  <mailingLists>
+    <mailingList/>
+  </mailingLists>
+  <contributors>
+    <contributor/>
+  </contributors>
+  <issueManagement/>
+  <ciManagement/>
+  <distributionManagement>
+    <repository>
+      <id>-</id>
+      <url/>
+    </repository>
+    <snapshotRepository>
+      <id>-</id>
+      <url/>
+    </snapshotRepository>
+  </distributionManagement>
+
 </project>
