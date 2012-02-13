@@ -1,6 +1,6 @@
 # Hippo Solr indexer
 
-[Solr](http://lucene.apache.org/solr/) index for [Hippo CMS](http://www.onehippo.com/en/products/cms)
+[Solr](http://lucene.apache.org/solr/) indexer for [Hippo CMS](http://www.onehippo.com/en/products/cms)
 
 ## Build
 
