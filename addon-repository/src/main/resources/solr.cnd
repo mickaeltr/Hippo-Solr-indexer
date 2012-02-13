@@ -1,0 +1,5 @@
+<'solr'='http://www.onehippo.org/solr/nt/1.0'>
+
+[solr:configuration]
+- solr:node (string) multiple
+- solr:property (string) multiple

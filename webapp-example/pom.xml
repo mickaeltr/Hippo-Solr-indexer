@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.onehippo.forge.solr.indexer</groupId>
+    <artifactId>solr-indexer</artifactId>
+    <version>0.01.00-SNAPSHOT</version>
+  </parent>
+
+  <name>Solr Indexer - WebApp Example</name>
+  <description>Hippo Forge - Solr Indexer - WebApp Example</description>
+  <groupId>org.onehippo.forge.solr.indexer</groupId>
+  <artifactId>solr-indexer-webapp-example</artifactId>
+  <version>0.01.00-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.onehippo.forge.solr.indexer</groupId>
+      <artifactId>solr-indexer-webapp-dependencies</artifactId>
+      <version>0.01.00-SNAPSHOT</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.solr</groupId>
+      <artifactId>solr</artifactId>
+      <version>${dependency.solr.version}</version>
+      <type>war</type>
+      <scope>runtime</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <finalName>solr</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <overlays>
+            <overlay>
+              <groupId>org.apache.solr</groupId>
+              <artifactId>solr</artifactId>
+              <excludes>
+                <exclude>WEB-INF/lib/*slf4j*.jar</exclude>
+                <exclude>WEB-INF/lib/commons-codec-*.jar</exclude>
+                <exclude>WEB-INF/lib/commons-lang-*.jar</exclude>
+              </excludes>
+            </overlay>
+          </overlays>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

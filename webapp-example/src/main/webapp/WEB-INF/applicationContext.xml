@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:task="http://www.springframework.org/schema/task"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+
+  <bean id="suggestionIndexer" class="org.onehippo.forge.solr.indexer.task.SolrIndexer">
+    <!-- Solr server URL -->
+    <constructor-arg name="serverUrl" value="http://localhost:8080/solr"/>
+    <!-- Number of documents in each batch -->
+    <constructor-arg name="queueSize" value="100"/>
+    <!-- Properties required by Solr to filter on (key = Solr ID, value = JCR property name) -->
+    <constructor-arg name="solrFilterProperties">
+      <map>
+        <entry key="jcr_uuid" value="jcr:uuid"/>
+        <entry key="jcr_primaryType" value="jcr:primaryType"/>
+      </map>
+    </constructor-arg>
+  </bean>
+
+  <task:scheduled-tasks scheduler="suggestionIndexerScheduler">
+    <!-- Run every day at midnight -->
+    <task:scheduled ref="suggestionIndexer" method="index" cron="0 0 0 * * *"/>
+  </task:scheduled-tasks>
+
+  <task:scheduler id="suggestionIndexerScheduler" pool-size="1"/>
+
+</beans>
