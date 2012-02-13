@@ -12,7 +12,7 @@ For regularly indexing [Hippo CMS](http://www.onehippo.com/en/products/cms) cont
 
 ## Install
 
-To be able to store the indexer configuration in the repository, you will add the **addon-repository** to the **content** module POM:
+To be able to define the content to be indexed, you will add the **addon-repository** to the **content** module POM:
 
     <dependency>
       <groupId>org.onehippo.forge.solr.indexer</groupId>
