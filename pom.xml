@@ -46,14 +46,25 @@
   <developers>
     <developer>
       <name>Woonsan Ko</name>
+      <email>w.ko@onehippo.com</email>
     </developer>
     <developer>
       <name>Najy Nicolas</name>
+      <email>n.nicolas@onehippo.com</email>
     </developer>
     <developer>
       <name>Mickaël Tricot</name>
+      <email>m.tricot@onehippo.com</email>
+      <url>http://gimmick.fr/</url>
     </developer>
   </developers>
+
+  <contributors>
+    <contributor>
+      <name>Mathijs Brand</name>
+      <email>m.brand@onehippo.com</email>
+    </contributor>
+  </contributors>
 
   <scm>
     <connection>scm:git:git@github.com:mickaeltr/Hippo-Solr-indexer.git</connection>
@@ -90,9 +101,6 @@
   <mailingLists>
     <mailingList/>
   </mailingLists>
-  <contributors>
-    <contributor/>
-  </contributors>
   <issueManagement/>
   <ciManagement/>
   <distributionManagement>
