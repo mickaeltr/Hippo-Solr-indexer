@@ -105,12 +105,12 @@
   <ciManagement/>
   <distributionManagement>
     <repository>
-      <id/>
-      <url/>
+      <id>-</id>
+      <url>-</url>
     </repository>
     <snapshotRepository>
-      <id/>
-      <url/>
+      <id>-</id>
+      <url>-</url>
     </snapshotRepository>
   </distributionManagement>
 
