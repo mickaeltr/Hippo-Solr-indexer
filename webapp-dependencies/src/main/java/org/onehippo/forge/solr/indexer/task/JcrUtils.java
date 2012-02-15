@@ -27,20 +27,20 @@ import org.slf4j.LoggerFactory;
  */
 public final class JcrUtils {
 
-    /** Path to availability */
-    private static final String AVAILABILITY_PATH = "hippo:availability";
-
     /** Logger */
     private static final Logger log = LoggerFactory.getLogger(JcrUtils.class);
 
     /** Node types cache (including super types) */
     private static final Map<NodeType, Collection<String>> NODE_TYPES = new HashMap<NodeType, Collection<String>>();
 
+    /** Path to availability */
+    private static final String PATH_AVAILABILITY = "hippo:availability";
+
     /** Path separator */
     private static final String PATH_SEPARATOR = "/";
 
     /** Path to UUID */
-    private static final String UUID_PATH = "jcr:uuid";
+    private static final String PATH_UUID = "jcr:uuid";
 
     /**
      * Close session quietly (does not throw exception)
@@ -168,17 +168,17 @@ public final class JcrUtils {
     public static boolean isLive(Node node) {
         boolean isLive = false;
         try {
-            if (!node.hasProperty(AVAILABILITY_PATH)) {
+            if (!node.hasProperty(PATH_AVAILABILITY)) {
                 return true;
             }
-            Value[] values = node.getProperty(AVAILABILITY_PATH).getValues();
+            Value[] values = node.getProperty(PATH_AVAILABILITY).getValues();
             int i = 0;
             while (!isLive && i < values.length) {
                 isLive = "live".equals(values[i].getString());
                 ++i;
             }
         } catch (RepositoryException e) {
-            log.error("Failed to retrieve property " + AVAILABILITY_PATH + " for node at " + getPath(node), e);
+            log.error("Failed to retrieve property " + PATH_AVAILABILITY + " for node at " + getPath(node), e);
         }
         return isLive;
     }
@@ -209,7 +209,7 @@ public final class JcrUtils {
             return null;
         }
         Object value = null;
-        if (UUID_PATH.equals(propertyPath)) {
+        if (PATH_UUID.equals(propertyPath)) {
             value = getUUID(node);
         }
         if (value == null) {
