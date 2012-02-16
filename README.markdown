@@ -64,5 +64,5 @@ Example: *hippo:document*
 
 ### Properties
 
-Set up which (nested) properties will be indexed.
+Set up which (nested) properties will be indexed as **dynamic fields**.
 Example: *ns:title*, *ns:html/hippostd:content*
