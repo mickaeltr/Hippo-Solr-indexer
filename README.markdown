@@ -46,7 +46,7 @@ After you run your project, the Solr application will be available at <http://lo
 When you get more serious and want to customize the webapp, you need to mimic the [Webapp example](https://github.com/mickaeltr/Hippo-Solr-indexer/tree/master/webapp-example) in your project. You may then configure:
 
  * [Spring applicationContext](https://github.com/mickaeltr/Hippo-Solr-indexer/blob/master/webapp-example/src/main/webapp/WEB-INF/applicationContext.xml) (see [Spring documentation for the IoC container](http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html))
- * [Solr schema]() (see [Solr documentation for SchemaXml](http://wiki.apache.org/solr/SchemaXml))
+ * [Solr schema](https://github.com/mickaeltr/Hippo-Solr-indexer/blob/master/webapp-example/src/main/webapp/WEB-INF/solr/conf/schema.xml) (see [Solr documentation for SchemaXml](http://wiki.apache.org/solr/SchemaXml))
  * [Solr config](https://github.com/mickaeltr/Hippo-Solr-indexer/blob/master/webapp-example/src/main/webapp/WEB-INF/solr/conf/solrconfig.xml) (see [Solr documentation for SolrConfigXml](http://wiki.apache.org/solr/SolrConfigXml))
 
 ## Configure
