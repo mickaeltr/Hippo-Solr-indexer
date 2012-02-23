@@ -21,13 +21,13 @@
   <parent>
     <groupId>org.onehippo.forge.solr.indexer</groupId>
     <artifactId>solr-indexer</artifactId>
-    <version>0.01.00-SNAPSHOT</version>
+    <version>0.01.01-SNAPSHOT</version>
   </parent>
 
   <name>Hippo Solr indexer - WebApp Dependencies</name>
   <groupId>org.onehippo.forge.solr.indexer</groupId>
   <artifactId>solr-indexer-webapp-dependencies</artifactId>
-  <version>0.01.00-SNAPSHOT</version>
+  <version>0.01.01-SNAPSHOT</version>
 
   <dependencies>
 
