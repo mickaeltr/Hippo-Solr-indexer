@@ -124,7 +124,7 @@
   <distributionManagement>
     <repository>
       <id>hippo-maven2-forge</id>
-      <url>http://maven.onehippo.com/maven2-forge</url>
+      <url>https://maven.onehippo.com/content/repositories/maven2-forge</url>
     </repository>
     <!--Override wrong meta pushed by the super POM-->
     <snapshotRepository>
