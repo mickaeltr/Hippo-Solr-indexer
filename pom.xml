@@ -14,7 +14,8 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -27,7 +28,7 @@
   <description>For regularly indexing Hippo CMS content into Solr</description>
   <groupId>org.onehippo.forge.solr.indexer</groupId>
   <artifactId>solr-indexer</artifactId>
-  <version>0.01.01-SNAPSHOT</version>
+  <version>0.01.00-SNAPSHOT</version>
   <packaging>pom</packaging>
   <url>https://github.com/mickaeltr/Hippo-Solr-indexer</url>
   <inceptionYear>2012</inceptionYear>
@@ -109,7 +110,7 @@
 
   <!--Override wrong meta pushed by the super POM-->
   <mailingLists>
-    <mailingList />
+    <mailingList/>
   </mailingLists>
 
   <issueManagement>
@@ -118,7 +119,7 @@
   </issueManagement>
 
   <!--Override wrong meta pushed by the super POM-->
-  <ciManagement />
+  <ciManagement/>
 
   <distributionManagement>
     <repository>
