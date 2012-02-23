@@ -28,7 +28,7 @@
   <description>For regularly indexing Hippo CMS content into Solr</description>
   <groupId>org.onehippo.forge.solr.indexer</groupId>
   <artifactId>solr-indexer</artifactId>
-  <version>0.01.01-SNAPSHOT</version>
+  <version>0.01.00-SNAPSHOT</version>
   <packaging>pom</packaging>
   <url>https://github.com/mickaeltr/Hippo-Solr-indexer</url>
   <inceptionYear>2012</inceptionYear>
