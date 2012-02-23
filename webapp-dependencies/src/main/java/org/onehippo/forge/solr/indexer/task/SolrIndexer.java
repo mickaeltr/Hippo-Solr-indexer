@@ -57,9 +57,10 @@ public final class SolrIndexer implements InitializingBean {
 
     /**
      * Create a JCR session
+     * @param logError Log ERROR if the session cannot be created (otherwise INFO)
      * @return Session (nullable)
      */
-    private static Session createSession() {
+    private static Session createSession(boolean logError) {
         Session session = null;
         if (HstServices.isAvailable()) {
             try {
@@ -68,10 +69,18 @@ public final class SolrIndexer implements InitializingBean {
                         HstServices.getComponentManager().getComponent(Credentials.class.getName() + ".default");
                 session = repository.login(credentials);
             } catch (RepositoryException e) {
-                log.error("Failed to create a JCR session: {}", e.getMessage());
+                if (logError) {
+                    log.error("Cannot create a JCR session", e);
+                } else {
+                    log.info("Cannot create a JCR session (yet): {}", e.getMessage());
+                }
             }
         } else {
-            log.info("Cannot create a JCR session because HST services are not available (yet).");
+            if (logError) {
+                log.error("Cannot create a JCR session because HST services are not available.");
+            } else {
+                log.info("Cannot create a JCR session (yet) because HST services are not available.");
+            }
         }
         return session;
     }
@@ -81,7 +90,7 @@ public final class SolrIndexer implements InitializingBean {
         Session session = null;
         try {
             while (session == null) {
-                session = createSession();
+                session = createSession(false);
                 if (session == null) {
                     log.debug("Repository is not ready yet, wait for 1 more minute");
                     try {
@@ -242,7 +251,7 @@ public final class SolrIndexer implements InitializingBean {
 
         synchronized (server) {
 
-            Session session = createSession();
+            Session session = createSession(true);
             if (session == null) {
                 return;
             }
