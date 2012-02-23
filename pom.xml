@@ -25,11 +25,13 @@
   </parent>
 
   <name>Hippo Solr indexer</name>
-  <description>For regularly indexing Hippo CMS content into Solr </description>
+  <description>For regularly indexing Hippo CMS content into Solr</description>
   <groupId>org.onehippo.forge.solr.indexer</groupId>
   <artifactId>solr-indexer</artifactId>
   <version>0.01.00-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <url>https://github.com/mickaeltr/Hippo-Solr-indexer</url>
+  <inceptionYear>2012</inceptionYear>
 
   <properties>
     <hippo.hst.version>2.24.00</hippo.hst.version>
@@ -107,22 +109,24 @@
   </modules>
 
   <!--Override wrong meta pushed by the super POM-->
-  <url/>
-  <inceptionYear/>
-  <organization/>
-  <licenses>
-    <license/>
-  </licenses>
   <mailingLists>
     <mailingList/>
   </mailingLists>
-  <issueManagement/>
+
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/mickaeltr/Hippo-Solr-indexer/issues</url>
+  </issueManagement>
+
+  <!--Override wrong meta pushed by the super POM-->
   <ciManagement/>
+
   <distributionManagement>
     <repository>
-      <id>-</id>
-      <url>-</url>
+      <id>hippo-maven2-forge</id>
+      <url>http://maven.onehippo.com/maven2-forge</url>
     </repository>
+    <!--Override wrong meta pushed by the super POM-->
     <snapshotRepository>
       <id>-</id>
       <url>-</url>
