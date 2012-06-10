@@ -34,7 +34,7 @@
   <inceptionYear>2012</inceptionYear>
 
   <properties>
-    <hippo.hst.version>2.24.00</hippo.hst.version>
+    <hippo.hst.version>2.24.04</hippo.hst.version>
     <dependency.commons-lang.version>2.6</dependency.commons-lang.version>
     <dependency.solr.version>3.5.0</dependency.solr.version>
     <dependency.spring.version>3.0.4.RELEASE</dependency.spring.version>
@@ -68,6 +68,7 @@
       <name>Najy Nicolas</name>
     </developer>
     <developer>
+      <id>mickaeltr</id>
       <name>Mickaël Tricot</name>
       <url>http://gimmick.fr/</url>
     </developer>
