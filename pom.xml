@@ -63,15 +63,12 @@
   <developers>
     <developer>
       <name>Woonsan Ko</name>
-      <email>w.ko@onehippo.com</email>
     </developer>
     <developer>
       <name>Najy Nicolas</name>
-      <email>n.nicolas@onehippo.com</email>
     </developer>
     <developer>
       <name>Mickaël Tricot</name>
-      <email>m.tricot@onehippo.com</email>
       <url>http://gimmick.fr/</url>
     </developer>
   </developers>
@@ -79,7 +76,6 @@
   <contributors>
     <contributor>
       <name>Mathijs Brand</name>
-      <email>m.brand@onehippo.com</email>
     </contributor>
   </contributors>
 
@@ -108,18 +104,22 @@
     <module>webapp-example</module>
   </modules>
 
-  <!--Override wrong meta pushed by the super POM-->
-  <mailingLists>
-    <mailingList/>
-  </mailingLists>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
 
   <issueManagement>
     <system>GitHub</system>
     <url>https://github.com/mickaeltr/Hippo-Solr-indexer/issues</url>
   </issueManagement>
 
-  <!--Override wrong meta pushed by the super POM-->
-  <ciManagement/>
+  <ciManagement>
+    <system>Jenkins</system>
+    <url>https://buildhive.cloudbees.com/job/mickaeltr/job/Hippo-Solr-indexer</url>
+  </ciManagement>
 
   <distributionManagement>
     <repository>
